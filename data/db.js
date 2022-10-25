@@ -16,7 +16,7 @@ const getPoint2 = async () => {
   const element = await collection
     .find({ price: { $lte: 300 } })
     .sort({ price: -1 })
-    .limit(200)
+    .limit(500)
     .toArray();
   return element;
 };
@@ -39,7 +39,6 @@ const getPoint4 = async () => {
         $lt: new Date("2018-12-23"),
       },
     })
-    .limit(200)
     .toArray();
   return element;
 };
